@@ -99,10 +99,6 @@ public class JProxyFrame extends JFrame implements ActionListener {
             public void mouseClicked(MouseEvent e) {
                 if (e.getClickCount() == 2)//鼠标双击图标
                 {
-                    // trayIcon.displayMessage("警告", "这是一个警告提示!", TrayIcon.MessageType.WARNING);   
-                    // trayIcon.displayMessage("错误", "这是一个错误提示!", TrayIcon.MessageType.ERROR);   
-                    //trayIcon.displayMessage("信息", "这是一个信息提示!", TrayIcon.MessageType.INFO);   
-                    //tray.remove(trayIcon); // 从系统的托盘实例中移除托盘图标      
                     jProxyFrame.setExtendedState(JFrame.NORMAL);//设置状态为正常  
                     jProxyFrame.setVisible(true);//显示主窗体  
                 }
@@ -120,20 +116,14 @@ public class JProxyFrame extends JFrame implements ActionListener {
                 if (e.getSource() == show) {
                     jProxyFrame.setExtendedState(JFrame.NORMAL);//设置状态为正常  
                     jProxyFrame.setVisible(true);
-                } //start  
-//                else if (e.getSource() == start) {
-//                    System.out.println("start");
-//                } //stop  
-//                else if (e.getSource() == stop) {
-//                    System.out.println("stop");
-//                }
+                }
             }
         };
         exit.addActionListener(al2);
         show.addActionListener(al2);
         
         try {
-            tray.add(trayIcon); // 将托盘图标添加到系统的托盘实例中  
+            tray.add(trayIcon);  
         } catch (AWTException ex) {
             ex.printStackTrace();
         }
