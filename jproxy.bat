@@ -1,0 +1,1 @@
+java -jar jproxy-jar-with-dependencies.jar
